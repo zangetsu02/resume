@@ -143,7 +143,7 @@
                         </p>
                         <p class="text-muted">
                           <small>
-                            <span class="space-right"> {{startDate}} - {{#if endDate}}{{endDate}}{{else}}Presente{{/if}} {{#if endDate}}| {{location}}{{/if}}</span>
+                            <span class="space-right date-capitalized"> {{startDate}} - {{#if endDate}}{{endDate}}{{else}}Presente{{/if}} {{#if endDate}}| {{location}}{{/if}}</span>
                           </small>
                         </p>
 
@@ -190,7 +190,7 @@
                       </p>
                       <p class="text-muted clear-margin-sm">
                         <small>
-                          {{startDate}} - {{#if endDate}} {{endDate}} {{else}} Currently Pursuing {{/if}}
+                          <span class="date-capitalized">{{startDate}} - {{#if endDate}} {{endDate}}</span> {{else}} Currently Pursuing {{/if}}
                         </small>
                       </p>
                       <div>{{description}}</div>
@@ -238,15 +238,15 @@
             <div style="text-align:center">
               <div class="detail no-print" style="font-size:1.5rem;margin-top:2rem;">
                 <a href="https://christianpalladini-resume.netlify.app/resume.pdf" class="info" itemprop="pdf" target="_blank">
-                  PDF Version
+                  Versione PDF
                 </a>
               </div>
                <div class="detail print-only" style="font-size:1.5rem;margin-top:2rem;" >
                 <a href="https://christianpalladini-resume.netlify.app/" class="info" itemprop="pdf" target="_blank">
-                  Online Version
+                  Versione Online
                 </a>
               </div>
-              <div style="opacity:0.7; font-size:1.2rem;margin-top:1rem;">Last updated at {{getBuildDate ''}}</div>
+              <div style="opacity:0.7; font-size:1.2rem;margin-top:1rem;">Ultimo aggiornamento <span class="date-capitalized">{{getBuildDate ''}}</span></div>
             </div>
           </div>
         </div>
