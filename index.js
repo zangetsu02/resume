@@ -5,6 +5,7 @@ var _ = require('underscore');
 var _s = require('underscore.string');
 var moment = require('moment');
 var axios = require('axios')
+const itLocale = require("moment/locale/it");
 
 function hasEmail(resume) {
   return !!resume.basics && !!resume.basics.email;
@@ -231,7 +232,7 @@ async function render(resume) {
   })
 
   Handlebars.registerHelper('getBuildDate', function() {
-    return moment().format('MMMM Do YYYY, h:mm:ss a')
+    return moment().locale('it', [itLocale]).format('D MMMM YYYY, HH:MM:ss')
   })
 
   return Handlebars.compile(template)({
