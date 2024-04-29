@@ -178,6 +178,29 @@
             </div>
             <div class='px10'></div>
 
+            {{#if resume.certificates}}
+            <h4 id="awards"><span class="title">Certificazioni</span></h4>
+            <ul class="list-unstyled">
+              {{#each resume.certificates}}
+                <li class="card-nested">
+                  <div class="content has-sidebar">
+                    <p class="clear-margin-sm">
+                      <a href="{{url}}" class="link-disguise" target="_blank">
+                        <strong>{{name}}</strong>,&nbsp; {{issuer}}
+                      </a>
+                    </p>
+                    </p>
+
+                    {{#if summary}}<p> {{summary}} </p>{{/if}}
+                  </div>
+                </li>
+              {{/each}}
+            </ul>
+            
+            {{/if}} 
+
+          <div class='px10'></div>
+
             <div id="education">
               <h4><span class="title">Istruzione</span></h4>
               <ul class="list-unstyled">
@@ -205,25 +228,7 @@
             </div>
 
 
-            {{!-- {{#if resume.certificates}}
-            <h4 id="awards"><span class="title">Certificazioni</span></h4>
-            <ul class="list-unstyled">
-              {{#each resume.certificates}}
-                <li class="card-nested">
-                  <div class="content has-sidebar">
-                    <p class="clear-margin-sm">
-                      <strong>{{name}}</strong>,&nbsp;
-           
-                        <a href="{{url}}" class="link-disguise" target="_blank">{{issuer}}</a>
-                    </p>
-                    </p>
 
-                    {{#if summary}}<p> {{summary}} </p>{{/if}}
-                  </div>
-                </li>
-              {{/each}}
-            </ul>
-            {{/if}} --}}
 
 
             {{#if resume.languages}}
