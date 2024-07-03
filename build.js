@@ -51,6 +51,11 @@ async function buildPDF(html) {
     fs.writeFileSync('./dist/favicon.png', fs.readFileSync('./assets/favicon.png'))
   }
 
+  if (fs.existsSync('./assets/me.png')) {
+    console.log('Saving pro pic...')
+    fs.writeFileSync('./dist/me.png', fs.readFileSync('./assets/me.png'))
+  }
+
   console.log('Done')
   return pdf
 }
