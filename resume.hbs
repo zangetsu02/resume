@@ -85,9 +85,9 @@
             <div class="card-nested" itemprop="description">
               <p> {{breaklines resume.basics.summary}} </p>
             </div>
+          {{#if resume.projects}}
 
             <div id="work-projects-group">
-              {{#if resume.projects}}
               <div id="projects">
                 <h4><span class="title">Progetti</span></h4>
                 <div class="list-unstyled projects">
@@ -129,7 +129,7 @@
                   <div class='px10'></div>
                 </div>
               </div>
-              {{/if}}
+          {{/if}}
 
               <div id="work-experience">
                 <h4> <span class="title">Esperienze Lavorative</span> </h4>
